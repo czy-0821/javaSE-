@@ -1,0 +1,203 @@
+﻿1	简答题
+1.1 简答题一
+简单描述下你对 API 的理解
+
+答：API是应用程序编程接口，是已经封装好的方法，可以通过调用API来解决问题。
+
+
+1.2 简答题二
+String 类中有很多重要的特点
+1). 创建对象
+2). 不可改变
+3). 内容共享
+请从这三个方面, 聊聊里面的细节
+
+
+答：String类有多种方法创建对象，包括 无参构造，有参构造，”“。
+
+String类不管是使用构造方法创建还是”“创建对象，都会开辟出一片空间，为其赋新的不一样的值，都只是开辟新的空间或是更改保存的地址，使其指向不同的空间，原来空间中的值并不会改变。
+
+在常量池中的数据
+
+
+1.3 简答题三
+请回答, 通过构造方法创建字符串对象, 对比双引号创建字符串对象, 两者有什么区别 ?
+
+
+答：通过构造方法创建字符串对象是直接在堆里开辟空间，且内容相同的对象是不共享的，但
+双引号创建字符串对象实在常量池中开辟空间，且内容相同的对象是共享一份数据的。
+
+
+1.4 简答题四
+请阅读下列代码, 分析出运行结果, 并解释原因
+答:
+答:
+答:
+String s1 = "abc";
+String s2 = "abc";
+System.out.println(s1 == s2);
+------------------------------------------------
+
+答：true   false   false   true
+
+
+
+
+1.5 简答题五
+需求 : 判断用户输入的密码是否正确, 密码为 String 类型, 应该使用下面哪一个方法	?	为什么	?
+
+答：equals方法，直接比较数据的值是否相同，应为String为引用类型，其中保存的为地址值。
+
+
+
+1.6 简答题六
+需求 : 对字符串进行遍历操作, 可以使用下列的哪些方法 ? 具体怎么遍历呢	?
+
+public boolean equals(String s)
+public boolean equalsIgnoreCase(String anotherString)
+public char[] toCharArray()
+public char charAt(int index)
+public int length()
+public String replace(CharSequence target, CharSequence replacement)
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex)
+public String[] split(String regex)
+
+答:
+
+1.toCharArray()  :将字符串转化为char类型的数组，然后遍历数组实现对字符串的遍历操作。
+
+2.charAt()  :  通过索引值依次获取到字符串中不同位置的元素，从而实现对字符串的遍历操作。
+
+3.substring（）：可以依次将字符串中每个位置的元素截取出来实现对字符串的遍历。
+
+
+
+
+
+
+1.7 简答题七
+需求 : 判断用户输入的验证码是否正确, 密码为 String 类型, 应该使用下面哪一个方法	?	为什么	?
+public boolean equals(String s)
+public boolean equalsIgnoreCase(String anotherString)
+public char[] toCharArray()
+public char charAt(int index)
+public int length()
+public String replace(CharSequence target, CharSequence replacement)
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex)
+public String[] split(String regex)
+答:
+
+
+equals()   ,直接比较数据的值是否相同，应为String为引用类型，其中保存的为地址值。
+
+
+
+
+
+
+
+
+
+
+1.8 简答题八
+需求 : 以字符串的形式, 从键盘录入用户的手机号, 将中间四位号码屏蔽掉, 说说你的思路,	并可以
+用到下面的哪个方法	?
+public boolean equals(String s)
+public boolean equalsIgnoreCase(String anotherString)
+public char[] toCharArray()
+public char charAt(int index)
+public int length()
+public String replace(CharSequence target, CharSequence replacement)
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex)
+public String[] split(String regex)
+答:
+
+
+使用substring方法，将手机号码开头的几个数字和结尾几个数字截取出来，并使用四个“*”替代中间四个数字，
+并将这些拼接起来，实现将中间四位号码屏蔽掉。
+
+
+
+
+
+
+
+
+
+
+1.9 简答题九
+需求 : 以字符串的形式录入用户发送的消息, 如果消息中带有 TMD , 使用 *** 替换
+说说你的思路,	并可以用到下面的哪个方法	?
+public boolean equals(String s)
+public boolean equalsIgnoreCase(String anotherString)
+public char[] toCharArray()
+public char charAt(int index)
+public int length()
+public String replace(CharSequence target, CharSequence replacement)
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex)
+public String[] split(String regex)
+答:
+
+
+使用replace方法，通过   信息.replace("TMD","***")  这种方式将信息中的“TMD”替换掉。
+
+
+
+
+
+
+
+
+1.11 简答题十
+需求 : 现有图书信息为 (三国演义-88) (红楼梦-88) (水浒传-88) 请从字符串中获取出书名和价格,
+并封装为 Book 图书对象
+说说你的思路,	并可以用到下面的哪个方法	?
+public boolean equals(String s)
+public boolean equalsIgnoreCase(String anotherString)
+public char[] toCharArray()
+public char charAt(int index)
+public int length()
+public String replace(CharSequence target, CharSequence replacement)
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex)
+public String[] split(String regex)
+答:
+
+
+先使用spilt("\\)")将字符串转变为  “（书名-价格”这种形式的数组，然后遍历数组，
+对每一个对象使用spilt("-")，再次分为“（书名”，“价格”的这种形式，然后对书名使用substring方法
+将“（”右边的书名提取出来，就获得了书名和价格了。
+
+
+
+
+1.12 简答题十一
+聊聊你对 StringBuilder 的理解, 什么时候你会想到使用 StringBuilder 呢 ?
+答:
+
+StringBuilder 是一个可变的字符串类，StringBuilder是一个可以一直向其中添加字符串对象的容器。
+
+当我们需要不断的拼接字符串时，可以使用StringBuilder进行拼接，拼接结束后，再将其转变为String类型。
+
+
+
+
+
+
+1.13 简答题十二
+String 和 StringBuilder 之间该如何进行转换 ? 并请说明, 什么时候需要进行转换 ?
+答:
+
+String 转变为StringBuilder  ： StringBuilder 对象名 = new StringBuilder(String类型的对象);
+
+StringBuilder 转变为String  ：StringBuilder类型的对象.toString();
+
+
+
+
+
+

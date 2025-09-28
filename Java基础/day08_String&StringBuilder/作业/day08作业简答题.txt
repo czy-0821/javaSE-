@@ -1,0 +1,115 @@
+﻿1	简答题
+1.1 简答题一
+简单描述下你对 API 的理解
+1.2 简答题二
+String 类中有很多重要的特点
+1). 创建对象
+2). 不可改变
+3). 内容共享
+请从这三个方面, 聊聊里面的细节
+1.3 简答题三
+请回答, 通过构造方法创建字符串对象, 对比双引号创建字符串对象, 两者有什么区别 ?
+1.4 简答题四
+请阅读下列代码, 分析出运行结果, 并解释原因
+答:
+答:
+答:
+String s1 = "abc";
+String s2 = "abc";
+System.out.println(s1 == s2);
+------------------------------------------------
+1.5 简答题五
+需求 : 判断用户输入的密码是否正确, 密码为 String 类型, 应该使用下面哪一个方法	?	为什么	?
+1.6 简答题六
+需求 : 对字符串进行遍历操作, 可以使用下列的哪些方法 ? 具体怎么遍历呢	?
+String s1 = new String("abc");
+String s2 = new String("abc");
+System.out.println(s1 == s2);
+------------------------------------------------
+String s1 = "abc";
+String s2 = "ab";
+String s3 = s2 + "c";
+System.out.println(s1 == s3);
+------------------------------------------------
+String s1 = "abc";
+String s2 = "a" + "b" + "c";
+System.out.println(s1 == s2);
+答:
+public boolean equals(String s)
+public boolean equalsIgnoreCase(String anotherString)
+public char[] toCharArray()
+public char charAt(int index)
+public int length()
+public String replace(CharSequence target, CharSequence replacement)
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex)
+public String[] split(String regex)
+答:
+public boolean equals(String s)
+public boolean equalsIgnoreCase(String anotherString)
+public char[] toCharArray()
+public char charAt(int index)
+public int length()
+public String replace(CharSequence target, CharSequence replacement)
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex)
+public String[] split(String regex)
+答:
+1.7 简答题七
+需求 : 判断用户输入的验证码是否正确, 密码为 String 类型, 应该使用下面哪一个方法	?	为什么	?
+public boolean equals(String s)
+public boolean equalsIgnoreCase(String anotherString)
+public char[] toCharArray()
+public char charAt(int index)
+public int length()
+public String replace(CharSequence target, CharSequence replacement)
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex)
+public String[] split(String regex)
+答:
+1.8 简答题八
+需求 : 以字符串的形式, 从键盘录入用户的手机号, 将中间四位号码屏蔽掉, 说说你的思路,	并可以
+用到下面的哪个方法	?
+public boolean equals(String s)
+public boolean equalsIgnoreCase(String anotherString)
+public char[] toCharArray()
+public char charAt(int index)
+public int length()
+public String replace(CharSequence target, CharSequence replacement)
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex)
+public String[] split(String regex)
+答:
+1.9 简答题九
+需求 : 以字符串的形式录入用户发送的消息, 如果消息中带有 TMD , 使用 *** 替换
+说说你的思路,	并可以用到下面的哪个方法	?
+public boolean equals(String s)
+public boolean equalsIgnoreCase(String anotherString)
+public char[] toCharArray()
+public char charAt(int index)
+public int length()
+public String replace(CharSequence target, CharSequence replacement)
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex)
+public String[] split(String regex)
+答:
+1.11 简答题十
+需求 : 现有图书信息为 (三国演义-88) (红楼梦-88) (水浒传-88) 请从字符串中获取出书名和价格,
+并封装为 Book 图书对象
+说说你的思路,	并可以用到下面的哪个方法	?
+public boolean equals(String s)
+public boolean equalsIgnoreCase(String anotherString)
+public char[] toCharArray()
+public char charAt(int index)
+public int length()
+public String replace(CharSequence target, CharSequence replacement)
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex)
+public String[] split(String regex)
+答:
+1.12 简答题十一
+聊聊你对 StringBuilder 的理解, 什么时候你会想到使用 StringBuilder 呢 ?
+答:
+1.13 简答题十二
+String 和 StringBuilder 之间该如何进行转换 ? 并请说明, 什么时候需要进行转换 ?
+答:

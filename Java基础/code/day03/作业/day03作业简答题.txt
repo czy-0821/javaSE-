@@ -1,0 +1,160 @@
+﻿1	简答题
+1.1 简答题一
+请回答switch语句, () 中可以接收的类型有哪些 ?
+
+答：
+byte,short,int,char
+String
+枚举类型
+
+
+1.2 简答题二
+如果switch语句省略了break, 会出现什么现象? 请简单描述下这个现象
+
+答：case穿透现象，会将内部的所有语句都执行直到遇见case或是将switch内部的所有语句执行完毕。
+
+
+1.3 简答题三
+键盘录入学生成绩, 0 ~ 100分, 根据成绩所在的区间, 打印出不同的奖励机制
+对于这个需求, 你觉得应该使用 if , 还是 switch 呢 ? 请说明理由
+
+答：if
+因为使用if可以进行区间分类，而switch只适用数量有限的等值匹配，使用if的效率更高且合适。
+
+
+1.4 简答题四
+简单描述下 Java 中循环的作用, 还有我们为什么要学习循环 ?
+
+答：循环可以重复执行相同的操作，省去重复劳动并减少代码量。
+学习循环可以减少重复的代码操作简化代码，减少无意义的重复劳动。
+
+
+1.5 简答题五
+现有如下代码 , 请说出执行流程和最终结果
+
+public class Demo {
+public static void main(String[] args){
+for(int i = 1; i <= 5; i++){
+System.out.println(i);
+
+答：程序进入for循环，依次打印从1-5的数字，然后结束循环，但最后试图打印‘i’会报错，因为再循环体外面并没有‘i’这个对象。
+
+
+
+1.6 简答题六
+现有如下代码 , 请说出执行流程和最终结果
+
+答：程序先声明sum变量并给其赋值为‘0’，然后进入for循环，每次将sum的值加上i的值并保存再sum中，然后打印出sum，并在执行了5次循环后跳出循环并结束程序。
+
+依次打印：1  3  6  10   15，sum最终等于15；
+
+
+1.7 简答题七
+现有如下代码 , 统计 1 ~ 20 之间, 5的倍数有几个, 但是代码存在错误, 请说明错误原因, 并更正代
+码
+public class Demo {
+public static void main(String[] args) {
+for (int i = 1; i <= 20; i++) {
+int count = 0;
+if(i % 5 == 0){
+count++;
+}
+System.out.println(count);
+}
+}
+}
+答:
+
+（1）count创建在for循环体内，每次循环count会从新创建覆盖原有数据
+（2）打印输出在for循环体内，每次循环都会打印count的值
+
+更改后：
+
+public class Demo {
+public static void main(String[] args) {
+
+int count = 0;
+
+for (int i = 1; i <= 20; i++) {
+
+if(i % 5 == 0){
+count++;
+}
+}
+System.out.println(count);
+}
+}
+
+
+
+
+1.8 简答题八
+现有如下代码 , 打印所有的水仙花数, 但是代码存在错误, 请说明错误原因, 并更正代码
+public class Demo {
+public static void main(String[] args) {
+int i = 100;
+while(i <= 999){
+int ge = i % 10;
+int shi = i / 10 % 10;
+int bai = i / 10 / 10 % 10;
+if(ge*ge*ge + shi*shi*shi + bai*bai*bai == i){
+System.out.println(i);
+}
+}
+}
+}
+答:
+
+（1）while循环体内缺少对i进行加1的操作
+
+public class Demo {
+public static void main(String[] args) {
+int i = 100;
+while(i <= 999){
+int ge = i % 10;
+int shi = i / 10 % 10;
+int bai = i / 10 / 10 % 10;
+if(ge*ge*ge + shi*shi*shi + bai*bai*bai == i){
+System.out.println(i);
+}
+i++；
+}
+}
+}
+
+
+
+
+1.9 简答题九
+请说出 Java 的三种循环分别是什么 ? 以及各自的区别
+答:
+
+for循环：先判断条件是否符合再执行循环体，条件控制语句所控制的自增体归属与for循环，循环结束后就不能被访问到了
+while循环：先判断条件是否符合再执行循环体，条件控制语句所控制的自增体不归属与for循环，循环结束后任然可以被访问到了
+
+dowhile循环：先执行循环体再判断条件是否符合，条件控制语句所控制的自增体不归属与for循环，循环结束后任然可以被访问到了
+
+
+
+1.10 简答题十
+观察以下的代码 , 下划线位置加入什么语句,可以在控制台打印
+7次 I Love Java
+2次 I Love Java
+13次 I Love Java
+public class Demo {
+public static void main(String[] args) {
+for (int i = 1; i <= 10; i++) {
+if (i % 3 == 0) {
+//___________
+}
+System.out.println("I Love Java");
+}
+}
+}
+答:
+
+7次: continue;
+
+2次:break;
+
+13次: System.out.println("I Love Java");
