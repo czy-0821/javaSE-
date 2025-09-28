@@ -1,0 +1,61 @@
+## 1.2 简答题一
+
+请分析如下程序编译是否会报错并说明原因？并给出正确的代码！
+答：导包错误，Student在com.itheima.day01.demo01中。
+
+packagecom.itheima.day01.demo01；
+public classDemo02
+public static voidd main(String[]args)
+创建Student的对象，并调用show方法
+Student s=new Student)
+s.showC);
+}
+}
+
+## 1.3 简答题二
+
+请分析如下程序在控制台的执行结果并说明原因？
+
+
+答：都输出“中国”
+
+因为country是静态成员变量，这是共享的，所以两个Student对象调用
+country得到的值是相同的。
+
+
+
+## 1.4 简答题三
+
+请分析如下程序编译是否会报错并说明原因？
+
+答：会报错。因为在static修饰的method方法中不能直接调用成员方法show()。
+
+
+
+
+
+## 1.5 简答题四
+
+请分析如下程序编译是否会报错并说明原因？
+
+
+答：不会报错，因为method方法和main方法都是静态成员方法且在同一个类中，
+在main方法中可以直接调用method方法。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
